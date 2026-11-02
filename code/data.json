@@ -1,0 +1,57 @@
+{
+  "seed": 42,
+  "grid_rows": 8,
+  "grid_cols": 15,
+  "layout_cell_length": 7,
+  "layout_cell_width": 12,
+  "layout_cell2_length": 2,
+  "layout_cell2_width": 6,
+  "layout_channel": 1,
+  "layout_unit_m": 5,
+  "move_hours_per_cell": 1,
+  "max_generations": 10,
+  "station_order": [
+    "200C",
+    "200B",
+    "200A",
+    "150",
+    "140C",
+    "140B",
+    "140A",
+    "130B",
+    "130A"
+  ],
+  "objective_weights": {
+    "T": 1.0,
+    "S": 0.00001
+  },
+  "aco": {
+    "iterations": 16,
+    "ants": 10,
+    "evaporation": 0.2,
+    "q": 20.0,
+    "pareto_stagnation_patience": 20
+  },
+  "nsga2": {
+    "generations": 30,
+    "population": 100,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.6,
+    "pareto_stagnation_patience": 20
+  },
+  "stage2": {
+    "max_generations": 10,
+    "population": 50,
+    "pareto_stagnation_patience": 15,
+    "path_planning_timeout": 10,
+    "max_station_types_per_column": 3,
+    "compression_success_reward": 0.1
+  },
+  "io": {
+    "schedule_file": "final_schedule.json",
+    "result_file": "result.json",
+    "plot_file": "plot.png",
+    "curve_file": "Hypervolume.png",
+    "pareto_file": "pareto.png"
+  }
+}
